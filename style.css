@@ -17,7 +17,7 @@ html, body {
     "footer footer footer"
     ;
     grid-template-rows: 100px auto auto 100px;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 6fr;
     
   
    
@@ -91,7 +91,7 @@ footer {
     @media (max-width: 768px) { /* Exemplo: para telas menores que 768px */
         .grid-container {
             grid-template-areas:
-                "header"
+                "header"                
                 "aside article"
                 "aside section"
                 "footer";
@@ -99,4 +99,3 @@ footer {
             grid-template-columns: 1fr; /* Apenas uma coluna */
         }
     }
-
