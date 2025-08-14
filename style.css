@@ -17,6 +17,7 @@ html, body {
     "footer footer footer"
     ;
     grid-template-rows: 100px auto auto 100px;
+    grid-template-columns: 1fr 2fr 2fr;
     
   
    
@@ -87,3 +88,15 @@ footer {
     border: 1px solid #ccc;
 }
 
+    @media (max-width: 768px) { /* Exemplo: para telas menores que 768px */
+        .grid-container {
+            grid-template-areas:
+                "header"
+                "aside"
+                "article"
+                "section"
+                "footer";
+            grid-template-rows: auto auto auto auto auto; /* Altura automática para cada linha */
+            grid-template-columns: 1fr; /* Apenas uma coluna */
+        }
+    }
