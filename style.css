@@ -89,14 +89,11 @@ footer {
 
 @media screen and (max-width: 768px) {
     .grid-container {
-        /* Redefine o layout para uma única coluna */
         grid-template-areas:
             "header"            
             "aside article"
             "section"
-            "footer";
-        
-        /* Todas as colunas terão 100% da largura disponível */
+            "footer";   
         grid-template-columns: 1fr; 
         
         /* As alturas das linhas se ajustam ao conteúdo */
