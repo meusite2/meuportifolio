@@ -26,13 +26,26 @@ body {
 
 header {
     grid-area: header;
-    background-color: #FFDDC1; /* Cor para o cabeçalho */
+    background-color: #212121; /* Cor para o cabeçalho */
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
     font-size: 1.5em;
     font-weight: bold;
     border: 1px solid #ccc;
+    padding: 2rem;
+    
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: #fff;
+    gap: 6rem;     
+}
+.logo{
+    color:#fff;
 }
 aside {
     grid-area: aside;
