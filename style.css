@@ -15,10 +15,10 @@ body {
     display: grid;
     grid-template-areas: 
     "header header header"
-    "aside article article"
+    "aside article article"    
     "footer footer footer"
     ;
-    flex-grow: 1;
+    min-height: 100%;
     grid-template-rows: 100px auto 100px;
     grid-template-columns: 1fr 4fr;    
 
@@ -49,7 +49,7 @@ aside {
 article {
     grid-area: article;
     background-color: #B2EBF2; /* Cor para o artigo principal */
-    min-height: 300px; /* Altura mínima para o artigo ser visível */
+    min-height: 100%; /* Altura mínima para o artigo ser visível */
     display: flex;
     justify-content: center;
     align-items: center;
