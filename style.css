@@ -92,11 +92,11 @@ footer {
         .grid-container {
             grid-template-areas:
                 "header"
-                "aside"
-                "article"
-                "section"
+                "aside article"
+                "aside section"
                 "footer";
             grid-template-rows: auto auto auto auto auto; /* Altura automática para cada linha */
             grid-template-columns: 1fr; /* Apenas uma coluna */
         }
     }
+
