@@ -91,9 +91,8 @@ footer {
     .grid-container {
         /* Redefine o layout para uma única coluna */
         grid-template-areas:
-            "header"
-            "aside"
-            "article"
+            "header"            
+            "aside article"
             "section"
             "footer";
         
