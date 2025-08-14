@@ -5,37 +5,38 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body { 
-    height: 100%; /* Garante que html e body ocupem 100% da altura da viewport */
+body {
+    height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    display: flex; /* Para centralizar ou controlar o main na página, se necessário */
+    flex-direction: column;
 }
+
 .grid-container{
     display: grid;
     grid-template-areas: 
     "header header header"
     "aside article article"
-    "aside section section"
     "footer footer footer"
     ;
+    flex-grow: 1;
     grid-template-rows: 100px auto auto 100px;
-    grid-template-columns: 1fr 6fr;
-    
-  
-   
+    grid-template-columns: 1fr 6fr;    
 
 }
 
-header{
+header {
     grid-area: header;
+    background-color: #FFDDC1; /* Cor para o cabeçalho */
     display: flex;
-    background-color: rgb(72, 197, 235);
     justify-content: center;
     align-items: center;
-    border: 1px solid gainsboro;
+    font-size: 1.5em;
     font-weight: bold;
+    border: 1px solid #ccc;
 }
 aside {
     grid-area: aside;
-    background-color: lightblue;
+    background-color: #C8E6C9; /* Cor para a barra lateral */
     min-height: 300px; /* Altura mínima para a barra lateral ser visível */
     display: flex;
     justify-content: center;
@@ -45,41 +46,10 @@ aside {
     border: 1px solid #ccc;
 }
 
-
-
-.imagem-portifolio {
-    display: flex;
-    position: relative;
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do seu contêiner */
-    height: auto;    /* Ajusta a altura automaticamente para manter a proporção da imagem */
-    display: block;  /* Remove o espaço extra abaixo da imagem que pode ocorrer com inline */
-}
-
 article {
     grid-area: article;
-    background-color: lightgreen;
+    background-color: #B2EBF2; /* Cor para o artigo principal */
     min-height: 300px; /* Altura mínima para o artigo ser visível */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-section {
-    grid-area: section;
-    background-color: lightsalmon;
-    min-height: 300px; /* Altura mínima para o artigo ser visível */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-footer {
-    grid-area: footer;
-    background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,14 +58,13 @@ footer {
     border: 1px solid #ccc;
 }
 
-    @media (max-width: 768px) { /* Exemplo: para telas menores que 768px */
-        .grid-container {
-            grid-template-areas:
-                "header"                
-                "aside article"
-                "aside section"
-                "footer";
-            grid-template-rows: auto auto auto auto auto; /* Altura automática para cada linha */
-            grid-template-columns: 1fr; /* Apenas uma coluna */
-        }
-    }
+footer {
+    grid-area: footer;
+    background-color: #FFECB3; /* Cor para o rodapé */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
