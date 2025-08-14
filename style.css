@@ -86,3 +86,48 @@ footer {
     font-weight: bold;
     border: 1px solid #ccc;
 }
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        /* Redefine o layout para uma única coluna */
+        grid-template-areas:
+            "header"
+            "aside"
+            "article"
+            "section"
+            "footer";
+        
+        /* Todas as colunas terão 100% da largura disponível */
+        grid-template-columns: 1fr; 
+        
+        /* As alturas das linhas se ajustam ao conteúdo */
+        grid-template-rows: auto auto auto auto auto; 
+        
+        /* Remove a altura mínima do container para permitir que ele se ajuste ao conteúdo */
+        min-height: unset; 
+    }
+
+    /* Ajustes para os itens do grid em telas menores */
+    aside, article, section {
+        min-height: 150px; /* Reduz a altura mínima para não ocupar muito espaço em telas pequenas */
+        padding: 15px; /* Ajusta o padding */
+    }
+
+    header, footer {
+        padding: 10px;
+        font-size: 1.2em; /* Diminui um pouco o tamanho da fonte */
+    }
+}
+
+/* Para telas com largura máxima de 480px (celulares menores) */
+@media screen and (max-width: 480px) {
+    aside, article, section {
+        min-height: 100px; /* Reduz ainda mais a altura mínima */
+        font-size: 1em; /* Diminui a fonte */
+        padding: 10px;
+    }
+
+    header, footer {
+        font-size: 1em; /* Diminui ainda mais a fonte */
+    }
+}
