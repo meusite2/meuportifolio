@@ -19,8 +19,8 @@ body {
     "footer footer footer"
     ;
     flex-grow: 1;
-    grid-template-rows: 100px auto auto 100px;
-    grid-template-columns: 1fr 6fr;    
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: 1fr 4fr;    
 
 }
 
