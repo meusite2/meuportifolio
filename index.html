@@ -1,70 +1,23 @@
-@charset "UTF-8";
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    height: 100vh; /* Garante que o body ocupe a altura total da viewport */
-    display: flex; /* Para centralizar ou controlar o main na página, se necessário */
-    flex-direction: column;
-}
-
-.grid-container{
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "aside article article"
-    "footer footer footer"
-    ;
-    flex-grow: 1;
-    grid-template-rows: 100px auto 100px;
-    grid-template-columns: 1fr 4fr;    
-
-}
-
-header {
-    grid-area: header;
-    background-color: #FFDDC1; /* Cor para o cabeçalho */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    border: 1px solid #ccc;
-}
-aside {
-    grid-area: aside;
-    background-color: #C8E6C9; /* Cor para a barra lateral */
-    min-height: 300px; /* Altura mínima para a barra lateral ser visível */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    border: 1px solid #ccc;
-}
-
-article {
-    grid-area: article;
-    background-color: #B2EBF2; /* Cor para o artigo principal */
-    min-height: 300px; /* Altura mínima para o artigo ser visível */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    border: 1px solid #ccc;
-}
-
-footer {
-    grid-area: footer;
-    background-color: #FFECB3; /* Cor para o rodapé */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    border: 1px solid #ccc;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narciso Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+    <header>Cabeçalho</header>
+    <main>
+       <article>            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit beatae praesentium tempore cupiditate vero minima dolor, nam aut quaerat eligendi aliquam modi odio ea quidem quam et, atque culpa nostrum?</p>
+       </article>
+    </main>
+    <aside>
+        aside
+    </aside>
+    <footer>footer</footer> 
+    </div>  
+</body>
+</html>
