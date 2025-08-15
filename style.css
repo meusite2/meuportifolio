@@ -94,6 +94,19 @@ footer {
     border: 1px solid #ccc;
 }
 
+@media(max-width:480px){
+    .nav-list{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+    .logo{        
+        color:#ee0063;
+}
+   
+}
 @media(max-width:768px){
     .nav-list{
         display: none;
@@ -101,11 +114,11 @@ footer {
 
     .mobile-menu{
         display: block;
-
+    }
     .logo{        
         color:#0010ee;
 }
-    }
+   
 }
 
 
