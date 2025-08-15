@@ -48,6 +48,17 @@ header {
 .logo{
     color:#fff;
 }
+
+.mobile-menu div{
+    background:#fff;
+    width: 32px;
+    height: 2px;
+    margin: 8px;
+
+}
+.mobile-menu{
+    display: none;
+}
 aside {
     grid-area: aside;
     background-color: #C8E6C9; /* Cor para a barra lateral */
@@ -82,3 +93,19 @@ footer {
     font-weight: bold;
     border: 1px solid #ccc;
 }
+
+@media(max-width:768px){
+    .nav-list{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: block;
+
+    .logo{        
+        color:#0010ee;
+}
+    }
+}
+
+
