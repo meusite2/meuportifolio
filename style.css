@@ -115,7 +115,7 @@ footer {
 /* Media Queries para responsividade */
 
 /* Para telas menores que 1200px (exemplo, ajuste conforme necessário) */
-@media (max-width: 1200px) {
+@media (min-width:1224px) and (max-width:1439px) {
     article {
         padding-left: 4rem;
         padding-right: 15rem; /* Reduzir o padding para telas médias */
@@ -123,9 +123,9 @@ footer {
 }
 
 /* Para telas menores que 992px (exemplo, tablets) */
-@media (max-width: 992px) {
+@media (min-width:768px) and (max-width:1023px){
     .mobile-menu{
-        display: block;
+        display: none;
     }
     article {
         padding-left: 3rem;
@@ -184,7 +184,7 @@ footer {
     article h3 { font-size: 18px; }
     article p { font-size: 14px; }
     .grid-container {
-        grid-template-rows: 80px auto 60px; /* Ajustar altura do header/footer se necessário */
+        grid-template-rows: 150px auto 60px; /* Ajustar altura do header/footer se necessário */
     }
     header {
         padding-right: 1rem;
