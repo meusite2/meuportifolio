@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -16,18 +16,18 @@ body {
     display: grid;
     grid-template-areas: 
     "header header header"
-    "aside article article"    
+    "article article article"    
     "footer footer footer"
     ;
     min-height: 100%;
-    grid-template-rows: 100px auto 100px;
-    grid-template-columns: 1fr 4fr;    
+    grid-template-rows: 150px auto 100px;
+    grid-template-columns:  1fr;    
 
 }
 
 header {
     grid-area: header;
-    background-color: #212121; /* Cor para o cabeçalho */
+    background-color: #0D0D0D; /* Cor para o cabeçalho */
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -50,9 +50,22 @@ header {
     font-weight: 100;
     font-style: normal;
     font-size: 23px;
+    font-weight:300;
+}
+.nav-list a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.nav-list a:hover{
+    color: #BFBFBF;
 }
 .logo{
+    align-items: center;
     color:#fff;
+    height: 150px;
+    width: auto;
 }
 
 .mobile-menu div{
@@ -66,33 +79,45 @@ header {
     display: none;
     cursor: pointer;
 }
-aside {
-    grid-area: aside;
-    background-color: #C8E6C9; /* Cor para a barra lateral */
-    min-height: 300px; /* Altura mínima para a barra lateral ser visível */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    border: 1px solid #ccc;
-}
+
 
 article {
     grid-area: article;
-    background-color: #B2EBF2; /* Cor para o artigo principal */
-    min-height: 100%; /* Altura mínima para o artigo ser visível */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction:column;
+    background-color: #d9d9d928; /* Cor para o artigo principal */
+    min-height: 100%; /* Altura mínima para o artigo ser visível */
+    justify-content:center;
     font-size: 1.5em;
     font-weight: bold;
     border: 1px solid #ccc;
+    padding-left: 6rem;
+    padding-right: 25rem;
+
 }
 
+
+article h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 45px;
+    font-weight:normal;
+}
+article h3{
+    font-family: "Poppins", sans-serif;    
+    font-size: 28px;
+    font-weight:normal;
+}
+article p{
+    font-family: "Poppins", sans-serif;    
+    font-size: 18px;
+    font-weight:normal;
+}
+.bold{
+    font-weight: bold;
+}
 footer {
     grid-area: footer;
-    background-color: #FFECB3; /* Cor para o rodapé */
+    background-color: #0D0D0D; /* Cor para o rodapé */
     display: flex;
     justify-content: center;
     align-items: center;
