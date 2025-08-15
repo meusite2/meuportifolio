@@ -124,6 +124,9 @@ footer {
 
 /* Para telas menores que 992px (exemplo, tablets) */
 @media (max-width: 992px) {
+    .mobile-menu{
+        display: block;
+    }
     article {
         padding-left: 3rem;
         padding-right: 8rem; /* Reduzir mais o padding */       
@@ -153,7 +156,7 @@ footer {
     article h3 { font-size: 20px; }
     article p { font-size: 15px; }
     .grid-container {
-        grid-template-rows: 100px auto 80px; /* Ajustar altura do header/footer se necessário */
+        grid-template-rows: 150px auto 80px; /* Ajustar altura do header/footer se necessário */
     }
     header {
         padding-right: 1.5rem;
