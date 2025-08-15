@@ -30,7 +30,6 @@ header {
     align-items: center;
     font-size: 1.5em;
     font-weight: bold;
-    border: 1px solid #ccc;
     padding-right: 3rem;
     padding-left: 3rem;
     flex-wrap: wrap;
@@ -79,7 +78,6 @@ article {
     min-height: 100%;
     justify-content:center;
     font-weight: bold;
-    border: 1px solid #ccc;
     padding-left: 6rem; /* Ajuste este valor também */
     padding-right: 25rem; /* ESTE É O PRINCIPAL PROBLEMA */
 }
@@ -109,7 +107,7 @@ footer {
     align-items: center;
     font-size: 1.5em;
     font-weight: bold;
-    border: 1px solid #ccc;
+
 }
 
 /* Media Queries para responsividade */
@@ -166,8 +164,8 @@ footer {
         padding-left: 1.5rem;
         padding-right: 1.5rem; /* Padding mais adequado para celulares */
     }
-    article h1 { font-size: 32px; }
-    article h3 { font-size: 20px; }
+    article h1 { font-size: 30px; }
+    article h3 { font-size: 18px; }
     article p { font-size: 15px; }
     .grid-container {
         grid-template-rows: 150px auto 80px; /* Ajustar altura do header/footer se necessário */
