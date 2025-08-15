@@ -1,33 +1,30 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    height: 100vh; /* Garante que o body ocupe a altura total da viewport */
-    display: flex; /* Para centralizar ou controlar o main na página, se necessário */
+    height: 100vh;
+    display: flex;
     flex-direction: column;
 }
-
 .grid-container{
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "header header header"
-    "article article article"    
+    "article article article"
     "footer footer footer"
     ;
     min-height: 100%;
     grid-template-rows: 150px auto 100px;
-    grid-template-columns:  1fr;    
-
+    grid-template-columns: 1fr;
 }
-
 header {
     grid-area: header;
-    background-color: #0D0D0D; /* Cor para o cabeçalho */
+    background-color: #0D0D0D;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -37,15 +34,13 @@ header {
     padding-right: 3rem;
     padding-left: 3rem;
     flex-wrap: wrap;
-    
 }
-
 .nav-list{
     display: flex;
     flex-direction: row;
     list-style: none;
     color: #fff;
-    gap: 6rem;     
+    gap: 6rem;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -57,7 +52,6 @@ header {
     color: #fff;
     transition: all 0.2s ease;
 }
-
 .nav-list a:hover{
     color: #BFBFBF;
 }
@@ -67,48 +61,40 @@ header {
     height: 150px;
     width: auto;
 }
-
 .mobile-menu div{
     background:#fff;
     width: 32px;
     height: 2px;
     margin: 8px;
-
 }
 .mobile-menu{
     display: none;
     cursor: pointer;
 }
-
-
 article {
     grid-area: article;
     display: flex;
     flex-direction:column;
-    background-color: #d9d9d928; /* Cor para o artigo principal */
-    min-height: 100%; /* Altura mínima para o artigo ser visível */
+    background-color: #d9d9d928;
+    min-height: 100%;
     justify-content:center;
-    font-size: 1.5em;
     font-weight: bold;
     border: 1px solid #ccc;
-    padding-left: 6rem;
-    padding-right: 25rem;
-
+    padding-left: 6rem; /* Ajuste este valor também */
+    padding-right: 25rem; /* ESTE É O PRINCIPAL PROBLEMA */
 }
-
-
 article h1{
     font-family: "Poppins", sans-serif;
     font-size: 45px;
     font-weight:normal;
 }
 article h3{
-    font-family: "Poppins", sans-serif;    
+    font-family: "Poppins", sans-serif;
     font-size: 28px;
     font-weight:normal;
 }
 article p{
-    font-family: "Poppins", sans-serif;    
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight:normal;
 }
@@ -117,7 +103,7 @@ article p{
 }
 footer {
     grid-area: footer;
-    background-color: #0D0D0D; /* Cor para o rodapé */
+    background-color: #0D0D0D;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,32 +112,79 @@ footer {
     border: 1px solid #ccc;
 }
 
-@media(max-width:480px){
+/* Media Queries para responsividade */
+
+/* Para telas menores que 1200px (exemplo, ajuste conforme necessário) */
+@media (max-width: 1200px) {
+    article {
+        padding-left: 4rem;
+        padding-right: 15rem; /* Reduzir o padding para telas médias */
+    }
+}
+
+/* Para telas menores que 992px (exemplo, tablets) */
+@media (max-width: 992px) {
+    article {
+        padding-left: 3rem;
+        padding-right: 8rem; /* Reduzir mais o padding */       
+    }
+    article h1 { font-size: 38px; }
+    article h3 { font-size: 24px; }
+    article p { font-size: 16px; }
+}
+
+/* Para telas menores que 768px (exemplo, celulares maiores ou tablets em retrato) */
+@media (max-width: 768px) {
     .nav-list{
         display: none;
     }
-
-    .mobile-menu{
-        display: block;
-    }
-    .logo{        
-        color:#ee0063;
-}
-   
-}
-@media(max-width:768px){
-    .nav-list{
-        display: none;
-    }
-
     .mobile-menu{
         display: block;
         z-index: 2;
     }
-    .logo{        
-        color:#0010ee;
-}
-   
+    .logo{
+        color:#0010ee; /* Mantenha sua cor de teste */
+    }
+    article {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; /* Padding mais adequado para celulares */
+    }
+    article h1 { font-size: 32px; }
+    article h3 { font-size: 20px; }
+    article p { font-size: 15px; }
+    .grid-container {
+        grid-template-rows: 100px auto 80px; /* Ajustar altura do header/footer se necessário */
+    }
+    header {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
 }
 
-
+/* Para telas menores que 480px (exemplo, celulares pequenos) */
+@media (max-width: 480px){
+    .nav-list{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .logo{
+        color:#ee0063; /* Mantenha sua cor de teste */
+    }
+    article {
+        padding-left: 1rem;
+        padding-right: 1rem; /* Padding mínimo */
+        font-size: 0.9em;
+    }
+    article h1 { font-size: 28px; }
+    article h3 { font-size: 18px; }
+    article p { font-size: 14px; }
+    .grid-container {
+        grid-template-rows: 80px auto 60px; /* Ajustar altura do header/footer se necessário */
+    }
+    header {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
