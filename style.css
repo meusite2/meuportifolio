@@ -88,7 +88,7 @@ article h1{
 }
 article h3{
     font-family: "Poppins", sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight:normal;
 }
 article p{
@@ -118,6 +118,7 @@ footer {
         padding-left: 4rem;
         padding-right: 15rem; /* Reduzir o padding para telas médias */
     }
+
 }
 
 /* Para telas menores que 992px (exemplo, tablets) */
@@ -147,6 +148,9 @@ footer {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+    article h1 { font-size: 30px; }
+    article h3 { font-size: 17px; }
+    article p { font-size: 15px; }
 }
 
 @media (max-width: 768px) {
@@ -192,9 +196,9 @@ footer {
         padding-right: 1rem; /* Padding mínimo */
         font-size: 0.9em;
     }
-    article h1 { font-size: 28px; }
-    article h3 { font-size: 18px; }
-    article p { font-size: 14px; }
+    article h1 { font-size: 26px; }
+    article h3 { font-size: 14px; }
+    article p { font-size: 12px; }
     .grid-container {
         grid-template-rows: 150px auto 60px; /* Ajustar altura do header/footer se necessário */
     }
