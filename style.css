@@ -137,6 +137,20 @@ footer {
 }
 
 /* Para telas menores que 768px (exemplo, celulares maiores ou tablets em retrato) */
+@media (min-width: 769px) and (max-width: 854px) {
+    .nav-list {
+        display: none; /* Esconde o menu de navegação normal */
+    }
+    .mobile-menu {
+        display: block; /* Esconde o ícone do menu mobile */
+    }
+    /* Opcional: ajustar padding do article para essa faixa se necessário */
+    article {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-list{
         display: none;
