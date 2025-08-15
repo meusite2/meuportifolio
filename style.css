@@ -148,9 +148,9 @@ footer {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    article h1 { font-size: 30px; }
-    article h3 { font-size: 17px; }
-    article p { font-size: 15px; }
+    article h1 { font-size: 28px; }
+    article h3 { font-size: 13px; }
+    article p { font-size: 12px; }
 }
 
 @media (max-width: 768px) {
